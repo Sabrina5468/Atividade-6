@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetir Nome</title>
+    
+  
+    <script>
+        function repetirNome() {
+            const nome = document.getElementById('nome').value;
+            const vezes = parseInt(document.getElementById('quantidade').value);
+            let resultado = '';
+            for (let i = 0; i < vezes; i++) {
+                resultado += `${nome}<br>`;
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: rgb(0, 0, 85);">Repetindo o nome</h1>
+    <label for="nome">Digite seu nome:</label> <br>
+    <input type="text" id="nome" placeholder="Seu nome aqui"> <br>
+    <br>
+    <label for="quantidade">Digite o número de vezes:</label><br>
+    <input type="number" id="quantidade" placeholder="Número de vezes">
+    <br>
+    <button onclick="repetirNome()">Repetir Nome</button>
+    <div id="resultado" style="color: rgb(0, 100, 100);"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Números</title>
+   
+    <script>
+        function calcularSoma() {
+            let soma = 0;
+            for (let i = 1; i <= 10; i++) {
+                const numero = parseFloat(prompt(`Digite o número ${i}:`));
+                if (!isNaN(numero)) {
+                    soma += numero;
+                } else {
+                    alert('Por favor, insira um número válido.');
+                    i--;
+                }
+            }
+            document.getElementById('resultado').textContent = `A soma dos 10 números é: ${soma}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+    <button onclick="calcularSoma()">Calcular Soma</button>
+    <p id="resultado"></p>
+</body>
+</html>

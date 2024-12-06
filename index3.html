@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetir Nome</title>
+    <script>
+        function repetirNome() {
+            const nome = document.getElementById('nome').value;
+            let resultado = '';
+            for (let i = 0; i < 10; i++) {
+                resultado += `${nome}<br>`;
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Repetidor de Nome</h1>
+    <label for="nome">Digite seu nome abaixo:</label> <br>
+    <input type="text" id="nome" placeholder="Seu nome aqui"> <br> <br>
+    <button onclick="repetirNome()">Repetir Nome</button>
+    <div id="resultado" style="color: rgb(216, 0, 47);"></div>
+
+</body>
+</html>
